@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:200");
+
+/* *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+/* font-family: monospace; */
+/* } */
+*/ .container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: black;
+  color: white;
+  gap: 2rem;
+}
+
+/* #watch{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 20rem;
+    height: 10rem;
+} */
+
+h1{
+    display: flex;
+  align-items: center;
+  justify-content: center;
+    font-size: 1rem;
+    color: white;
+}
+
+ 
+span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  width: 18rem;
+
+
+  height: 8rem;
+  gap: 2rem;
+}
+
+button {
+  width: 5rem;
+  height: 2.6em;
+  background-color: black;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(0, 34, 255, 0.468);
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background: #1d1f20;
+}
+#box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  width: 19rem;
+  height: 10rem;
+  color: white;
+  font-family: "Raleway";
+  font-size: 2.5rem;
+}
+.gradient-border {
+  --borderWidth: 2px;
+  background: #1d1f20;
+  position: relative;
+  border-radius: var(--borderWidth);
+
+}
+.gradient-border:after {
+  content: "";
+  position: absolute;
+  top: calc(-1 * var(--borderWidth));
+  left: calc(-1 * var(--borderWidth));
+  height: calc(100% + var(--borderWidth) * 2);
+  width: calc(100% + var(--borderWidth) * 2);
+  background: linear-gradient(
+    60deg,
+    #ff0000,
+    #ff0000,
+    #ff0048,
+    #d900ff,
+    #0d00ff,
+    #ff0000,
+    #ff0000,
+    #2600ff
+  );
+  border-radius: calc( 2* var(--borderWidth));
+  z-index: -1;
+  animation: animatedgradient 10s ease alternate infinite;
+  background-size: 300% 300%;
+}
+
+@keyframes animatedgradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
